@@ -9,34 +9,41 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from constant import *
-import connect
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(802, 506)
+        Form.resize(344, 336)
         self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(290, 330, 191, 51))
+        self.pushButton.setGeometry(QtCore.QRect(70, 220, 191, 51))
         self.pushButton.setObjectName("pushButton")
         self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(330, 120, 121, 41))
+        self.label.setGeometry(QtCore.QRect(80, 20, 181, 91))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(14)
+        self.label.setFont(font)
         self.label.setTextFormat(QtCore.Qt.AutoText)
         self.label.setObjectName("label")
         self.textEdit = QtWidgets.QTextEdit(Form)
-        self.textEdit.setGeometry(QtCore.QRect(290, 200, 191, 41))
+        self.textEdit.setGeometry(QtCore.QRect(30, 130, 271, 41))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(14)
+        self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
+
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "登录"))
         self.pushButton.setText(_translate("Form", "登录"))
         self.label.setText(_translate("Form", "请输入您的姓名"))
         self.textEdit.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'黑体\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))

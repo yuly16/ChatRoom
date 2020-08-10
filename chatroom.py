@@ -9,64 +9,57 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import connect
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import QWidget
-
-import os
-
-class Str_Signal(QtCore.QObject):
-    signal = pyqtSignal(str)
-
-
-class Widget(QWidget):
-    def closeEvent(self, event: QtGui.QCloseEvent) -> None:
-        QCoreApplication.instance().quit()
-        os._exit(5)
 
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(640, 455)
+        Form.resize(641, 844)
         self.textBrowser = QtWidgets.QTextBrowser(Form)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 80, 471, 231))
+        self.textBrowser.setGeometry(QtCore.QRect(80, 80, 471, 561))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(14)
+        self.textBrowser.setFont(font)
         self.textBrowser.setObjectName("textBrowser")
         self.textEdit = QtWidgets.QTextEdit(Form)
-        self.textEdit.setGeometry(QtCore.QRect(80, 330, 361, 81))
+        self.textEdit.setGeometry(QtCore.QRect(80, 690, 361, 81))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(12)
+        self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(460, 330, 93, 81))
+        self.pushButton.setGeometry(QtCore.QRect(460, 690, 93, 81))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(14)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.title = QtWidgets.QLabel(Form)
-        self.title.setGeometry(QtCore.QRect(80, 20, 131, 41))
-        self.title.setText("aaa")
+        self.title.setGeometry(QtCore.QRect(230, 20, 141, 41))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(14)
+        self.title.setFont(font)
+        self.title.setText("")
+        self.title.setAlignment(QtCore.Qt.AlignCenter)
         self.title.setObjectName("title")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        # 定义信号
-        self.showtestbrowser = Str_Signal()
-        self.showtestbrowser.signal.connect(self.textBrowser.append)
-
-    def closeEvent(self, event):
-        event.ignore()
-
-    def onclick(self):
-        msg = self.textEdit.toPlainText()
-        self.textEdit.setText('')
-        connect.sender(msg)
-
-    def setname(self,name):
-        self.name = name
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "聊天室"))
         self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'黑体\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        self.textEdit.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'黑体\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton.setText(_translate("Form", "发送"))
