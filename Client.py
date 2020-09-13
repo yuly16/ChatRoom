@@ -1,3 +1,5 @@
+# 客户端原型，已弃用
+
 import socket
 import threading
 import select

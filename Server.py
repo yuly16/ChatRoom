@@ -1,7 +1,7 @@
 import socket
 import select
 host = ""
-port = 60000
+port = 40000
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 server.listen(5)

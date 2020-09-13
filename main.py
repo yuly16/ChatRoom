@@ -1,3 +1,4 @@
+
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog
 import login, chatroom
@@ -21,24 +22,10 @@ def main_login():
             t.start()
 
 
-# def config():
-#     f = open('config', 'r')
-#     f_lines = f.readlines()
-#     f.close()
-#     global host
-#     global port
-#     host = f_lines[0].split('=')[-1].strip()
-#     port = int(f_lines[1].split('=')[-1].strip())
 
 def main():
     app = QApplication(sys.argv)
 
-    # print(host, type(host))
-    # print(port, type(port))
-    # # 初始化网络配置
-    # config()
-    # print(host, type(host))
-    # print(port, type(port))
     # 定义窗口
     global MainWindow
     global ui1
@@ -57,6 +44,7 @@ def main():
     Warning = QDialog()
     ui3 = Ui_Dialog_warning()
     ui3.setupUi(Warning)
+
     # 定义信号和槽
     ui1.pushButton.clicked.connect(main_login)
 

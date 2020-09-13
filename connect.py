@@ -11,6 +11,7 @@ import os
 def first_connect(name, warning):
     global s
     try:
+        print(host)
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((host, port))
         # 和服务器建立第一次连接
