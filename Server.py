@@ -1,7 +1,7 @@
 import socket
 import select
 host = ""
-port = 40000
+port = 8000
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 server.listen(5)
@@ -14,19 +14,20 @@ while r_list:
     for input in inputs:
         if input is server:
 
-            # 接受客户端的socket
+            # accept the socket of client
             sock, addr = input.accept()
             new_fd = sock.getpeername()[1]
 
-            # 获取客户端的名称
+            # acquire the name of client
             name = sock.recv(1024)
             socket2name[sock] = name
-            # # 对客户端发送登录成功消息
+
+            # # send "login success message" to the client
 
             r_list.append(sock)
             print("got connection from ", sock.getpeername(), ' its name is %s'%(str(name,encoding='utf-8')))
             for client in r_list[1:]:
-                client.send(name + bytes('加入了聊天室', encoding='utf-8'))
+                client.send(name + bytes(' joins the chat room.', encoding='utf-8'))
         else:
             try:
                 msg = input.recv(1024)
@@ -37,9 +38,9 @@ while r_list:
                     r_list.remove(input)
                     name = socket2name[input]
                     for client in r_list[1:]:
-                        client.send(name + bytes('退出了聊天室', encoding='utf-8'))
+                        client.send(name + bytes(' leaves the chat room', encoding='utf-8'))
                 else:
-                    # 广播消息
+                    # broadcast the message
                     sender_name = socket2name[input] + bytes(': ', encoding='utf-8')
                     for client in r_list[1:]:
                         client.send(sender_name + msg)
@@ -47,7 +48,7 @@ while r_list:
                 r_list.remove(input)
                 name = socket2name[input]
                 for client in r_list[1:]:
-                    client.send(name + bytes('退出了聊天室', encoding='utf-8'))
+                    client.send(name + bytes(' leaves the chat room', encoding='utf-8'))
 
 
 

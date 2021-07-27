@@ -19,7 +19,7 @@ def first_connect(name, warning):
         s.send(bytes(name, encoding='utf-8'))
         return 0
     except socket.error:
-        warning.emit("服务端或您出现问题，终止程序。")
+        warning.emit("The server or you meets some error. The program ends.")
         return -1
 
 
@@ -36,7 +36,7 @@ def receiver(signal, warning, name):
                     spk = msg.split(':')[0]
                     utt = msg.split(':')[1]
                     if name == spk:
-                        msg = '<font color=\'blue\'>' + '我（' + spk + '） ' + current_time + '</font>'
+                        msg = '<font color=\'blue\'>' + 'Me（' + spk + '） ' + current_time + '</font>'
                     else:
                         msg = '<font color=\'green\'>'  + spk + ' ' + current_time + '</font>'
                     signal.emit(msg)
@@ -47,7 +47,7 @@ def receiver(signal, warning, name):
                     msg += '\n'
                     signal.emit(msg)
             except socket.error:
-                warning.emit("服务端或您出现问题，终止程序。")
+                warning.emit("The server or you meets some error. The program ends.")
 
 
 # 消息发送器
@@ -58,7 +58,7 @@ def sender(msg, warning):
         try:
             s.send(bytes(msg, encoding='utf-8'))
         except socket.error:
-            warning.emit("服务端或您出现问题，终止程序。")
+            warning.emit("The server or you meets some error. The program ends.")
 
 
 # 调试函数

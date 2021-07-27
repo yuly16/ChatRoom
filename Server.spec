@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['Server.py'],
+a = Analysis(['server.py'],
              pathex=['D:\\script\\PycharmScript\\Chat'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='Server',
+          name='server',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
