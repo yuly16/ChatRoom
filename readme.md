@@ -3,7 +3,7 @@
 ## 1. Introduction
 
 This is a simple GUI chat room program, where several 
-clients can chat with each other. It is written by Python and PyQt. The demo picture is:
+clients can chat with each other. It is written by Python and PyQt.
 The communication protocol is TCP/IP. 
 ![pic](demo.png)
 
