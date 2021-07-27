@@ -18,7 +18,7 @@ class Ui_Dialog(object):
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(50, 30, 331, 141))
         font = QtGui.QFont()
-        font.setFamily("黑体")
+        font.setFamily("Arial")
         font.setPointSize(10)
         self.label.setFont(font)
         self.label.setText("")
@@ -27,7 +27,7 @@ class Ui_Dialog(object):
         self.pushButton = QtWidgets.QPushButton(Dialog)
         self.pushButton.setGeometry(QtCore.QRect(160, 220, 111, 41))
         font = QtGui.QFont()
-        font.setFamily("黑体")
+        font.setFamily("Arial")
         font.setPointSize(12)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
@@ -38,4 +38,4 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "warning"))
-        self.pushButton.setText(_translate("Dialog", "好的"))
+        self.pushButton.setText(_translate("Dialog", "Okay"))

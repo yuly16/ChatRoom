@@ -18,28 +18,28 @@ class Ui_Form(object):
         self.textBrowser = QtWidgets.QTextBrowser(Form)
         self.textBrowser.setGeometry(QtCore.QRect(80, 80, 471, 561))
         font = QtGui.QFont()
-        font.setFamily("黑体")
+        font.setFamily("Arial")
         font.setPointSize(14)
         self.textBrowser.setFont(font)
         self.textBrowser.setObjectName("textBrowser")
         self.textEdit = QtWidgets.QTextEdit(Form)
         self.textEdit.setGeometry(QtCore.QRect(80, 690, 361, 81))
         font = QtGui.QFont()
-        font.setFamily("黑体")
+        font.setFamily("Arial")
         font.setPointSize(12)
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(460, 690, 93, 81))
         font = QtGui.QFont()
-        font.setFamily("黑体")
+        font.setFamily("Arial")
         font.setPointSize(14)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.title = QtWidgets.QLabel(Form)
-        self.title.setGeometry(QtCore.QRect(230, 20, 141, 41))
+        self.title.setGeometry(QtCore.QRect(120, 20, 371, 41))
         font = QtGui.QFont()
-        font.setFamily("黑体")
+        font.setFamily("Arial")
         font.setPointSize(14)
         self.title.setFont(font)
         self.title.setText("")
@@ -51,15 +51,15 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "聊天室"))
+        Form.setWindowTitle(_translate("Form", "Chat Room"))
         self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'黑体\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'Arial\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'黑体\';\"><br /></p></body></html>"))
         self.textEdit.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'黑体\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.pushButton.setText(_translate("Form", "发送"))
+"</style></head><body style=\" font-family:\'Arial\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'黑体\';\"><br /></p></body></html>"))
+        self.pushButton.setText(_translate("Form", "Send"))

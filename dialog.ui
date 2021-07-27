@@ -24,7 +24,7 @@
    </property>
    <property name="font">
     <font>
-     <family>黑体</family>
+     <family>Arial</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -46,12 +46,12 @@
    </property>
    <property name="font">
     <font>
-     <family>黑体</family>
+     <family>Arial</family>
      <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>好的</string>
+    <string>Okay</string>
    </property>
   </widget>
  </widget>
